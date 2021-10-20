@@ -3,10 +3,12 @@ package dad.login;
 import dad.login.auth.AuthService;
 import dad.login.auth.FileAuthService;
 import dad.login.auth.LdapAuthService;
+import javafx.application.Application;
 
 public class Main {
 	
 	public static void main(String[] args) throws Exception {
+		
 		
 		boolean useLdap = true;
 		
@@ -16,7 +18,7 @@ public class Main {
 		System.out.println("David Carradine : " + auth.login("dcarradine", "kungfu"));
 		System.out.println("David Carradine : " + auth.login("dcarradine", "karate"));
 		System.out.println("Michael Knight  : " + auth.login("mknight", "kit"));
-		
+		launch.main(args);
 	}
 
 }
