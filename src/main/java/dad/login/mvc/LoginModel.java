@@ -7,26 +7,40 @@ public class LoginModel {
 
 	private StringProperty usuario= new SimpleStringProperty();
 	private StringProperty contraseña= new SimpleStringProperty();
-	
+	private StringProperty chechBox= new SimpleStringProperty();
 	public LoginModel() {
 		
 		
 	}
-
-	public StringProperty getUsuario() {
-		return usuario;
+	public final StringProperty usuarioProperty() {
+		return this.usuario;
 	}
-
-	public void setUsuario(StringProperty usuario) {
-		this.usuario = usuario;
+	
+	public final String getUsuario() {
+		return this.usuarioProperty().get();
 	}
-
-	public StringProperty getContraseña() {
-		return contraseña;
+	
+	
+	
+	public final StringProperty contraseñaProperty() {
+		return this.contraseña;
 	}
-
-	public void setContraseña(StringProperty contraseña) {
-		this.contraseña = contraseña;
+	
+	public final String getContraseña() {
+		return this.contraseñaProperty().get();
 	}
+	
+	
+	public final StringProperty chechBoxProperty() {
+		return this.chechBox;
+	}
+	
+	public final String getChechBox() {
+		return this.chechBoxProperty().get();
+	}
+	
+	
+
+	
 	
 }
