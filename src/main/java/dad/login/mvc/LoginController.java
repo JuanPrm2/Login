@@ -13,4 +13,14 @@ public class LoginController {
 		
 	
 	}
+
+
+	public LoginModel getModel() {
+		return model;
+	}
+
+
+	public LoginView getView() {
+		return view;
+	}
 }

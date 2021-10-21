@@ -6,6 +6,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 
 public class LoginView {
@@ -30,23 +31,13 @@ public class LoginView {
 		acceder=new Button();
 		cancelar= new Button();
 		
-		
-		HBox primeraFila = new HBox(usuarioLabel,usuarioTextField);
-		primeraFila.setAlignment(Pos.CENTER);
-		primeraFila.setSpacing(5);
-		
-		HBox segundaFila= new HBox (contraseniaLabel,contraseniaPasswordField);
-		segundaFila.setAlignment(Pos.CENTER);
-		segundaFila.setSpacing(5);
-		
-		HBox terceraFila= new HBox(usarCheckBox,usarLabel);
-		terceraFila.setAlignment(Pos.CENTER);
-		terceraFila.setSpacing(5);
-		
-		HBox cuartafila= new HBox(acceder,cancelar);
-		cuartafila.setAlignment(Pos.CENTER);
-		cuartafila.setSpacing(5);
-		
+
+		GridPane interfaz= new GridPane();
+		interfaz.addRow(0,usuarioLabel,usuarioTextField);
+		interfaz.addRow(1,contraseniaLabel,contraseniaPasswordField);
+		interfaz.addRow(2,usarCheckBox,usarLabel);
+		interfaz.addRow(3,acceder,cancelar);
+		interfaz.setAlignment(Pos.CENTER);
 		
 		
 	}
