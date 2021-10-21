@@ -33,15 +33,19 @@ public class LoginView {
 		
 		HBox primeraFila = new HBox(usuarioLabel,usuarioTextField);
 		primeraFila.setAlignment(Pos.CENTER);
+		primeraFila.setSpacing(5);
 		
 		HBox segundaFila= new HBox (contraseniaLabel,contraseniaPasswordField);
 		segundaFila.setAlignment(Pos.CENTER);
+		segundaFila.setSpacing(5);
 		
 		HBox terceraFila= new HBox(usarCheckBox,usarLabel);
 		terceraFila.setAlignment(Pos.CENTER);
+		terceraFila.setSpacing(5);
 		
 		HBox cuartafila= new HBox(acceder,cancelar);
 		cuartafila.setAlignment(Pos.CENTER);
+		cuartafila.setSpacing(5);
 		
 		
 		

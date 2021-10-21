@@ -12,5 +12,21 @@ public class LoginModel {
 		
 		
 	}
+
+	public StringProperty getUsuario() {
+		return usuario;
+	}
+
+	public void setUsuario(StringProperty usuario) {
+		this.usuario = usuario;
+	}
+
+	public StringProperty getContraseña() {
+		return contraseña;
+	}
+
+	public void setContraseña(StringProperty contraseña) {
+		this.contraseña = contraseña;
+	}
 	
 }
