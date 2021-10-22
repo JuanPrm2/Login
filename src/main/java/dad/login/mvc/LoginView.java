@@ -57,7 +57,7 @@ public class LoginView {
 	public Label getUsarLabel() {
 		return usarLabel;
 	}
-
+// posible error
 	public CheckBox getUsarCheckBox() {
 		return usarCheckBox;
 	}

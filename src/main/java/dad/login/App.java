@@ -20,6 +20,7 @@ public class App extends Application{
 	
 	@Override
 	public void start(Stage primaryStage) throws Exception {
+		
 		controller= new LoginController();
 		
 		Scene scene= new Scene(controller.getView(),400,320);
