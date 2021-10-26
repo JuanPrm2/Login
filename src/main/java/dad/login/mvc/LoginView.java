@@ -1,5 +1,6 @@
 package dad.login.mvc;
 
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.control.CheckBox;
@@ -9,13 +10,13 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 
-public class LoginView {
+public class LoginView extends GridPane{
 
 	private TextField usuarioTextField;
 	private Label usuarioLabel,contraseniaLabel,usarLabel;
 	private CheckBox usarCheckBox;
 	private PasswordField contraseniaPasswordField;
-	private Button acceder,cancelar;
+	private Button accederButton,cancelarButton;
 	
 	public LoginView() {
 		super();
@@ -24,20 +25,34 @@ public class LoginView {
 		usuarioTextField=new TextField();
 		contraseniaPasswordField= new PasswordField();
 		
-		usuarioLabel=new Label();
-		contraseniaLabel=new Label();
-		usarLabel=new Label();
+		usuarioLabel=new Label("Usuario:");
+		usuarioLabel.prefWidth(80);
+		contraseniaLabel=new Label("Contraseña:");
+		contraseniaLabel.prefWidth(80);
+		usarLabel=new Label("Usar LDAP");
 		usarCheckBox= new CheckBox();
-		acceder=new Button();
-		cancelar= new Button();
+		accederButton=new Button("Acceder");
+		accederButton.setDefaultButton(true);
+		cancelarButton= new Button("Cancelar");
+		
+		HBox checkBoxHBox= new HBox (usarCheckBox,usarLabel);
+		checkBoxHBox.setAlignment(Pos.CENTER);
+		checkBoxHBox.setSpacing(5);
+		HBox botonesHBox= new HBox (accederButton,cancelarButton);
+		botonesHBox.setAlignment(Pos.CENTER);
+		botonesHBox.setSpacing(5);
 		
 
-		GridPane interfaz= new GridPane();
-		interfaz.addRow(0,usuarioLabel,usuarioTextField);
-		interfaz.addRow(1,contraseniaLabel,contraseniaPasswordField);
-		interfaz.addRow(2,usarCheckBox,usarLabel);
-		interfaz.addRow(3,acceder,cancelar);
-		interfaz.setAlignment(Pos.CENTER);
+
+		this.addRow(0,usuarioLabel,usuarioTextField);
+		this.addRow(1,contraseniaLabel,contraseniaPasswordField);
+		this.addRow(2,checkBoxHBox);
+		this.addRow(3,botonesHBox);
+		this.setVgap(5);
+		this.setColumnSpan(botonesHBox, 2);
+		this.setColumnSpan(checkBoxHBox, 2);
+		this.setAlignment(Pos.CENTER);
+		this.setPadding(new Insets(5));
 		
 		
 	}
@@ -67,10 +82,10 @@ public class LoginView {
 	}
 
 	public Button getAcceder() {
-		return acceder;
+		return accederButton;
 	}
 
 	public Button getCancelar() {
-		return cancelar;
+		return cancelarButton;
 	}
 }
